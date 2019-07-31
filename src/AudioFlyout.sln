@@ -8,16 +8,25 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
 		Release UIAccess|Any CPU = Release UIAccess|Any CPU
+		Release UIAccess|x86 = Release UIAccess|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D72DA4DB-3534-4260-85D1-AA0B9721F21B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D72DA4DB-3534-4260-85D1-AA0B9721F21B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D72DA4DB-3534-4260-85D1-AA0B9721F21B}.Debug|x86.ActiveCfg = Debug|x86
+		{D72DA4DB-3534-4260-85D1-AA0B9721F21B}.Debug|x86.Build.0 = Debug|x86
 		{D72DA4DB-3534-4260-85D1-AA0B9721F21B}.Release UIAccess|Any CPU.ActiveCfg = Release UIAccess|Any CPU
 		{D72DA4DB-3534-4260-85D1-AA0B9721F21B}.Release UIAccess|Any CPU.Build.0 = Release UIAccess|Any CPU
+		{D72DA4DB-3534-4260-85D1-AA0B9721F21B}.Release UIAccess|x86.ActiveCfg = Release UIAccess|x86
+		{D72DA4DB-3534-4260-85D1-AA0B9721F21B}.Release UIAccess|x86.Build.0 = Release UIAccess|x86
 		{D72DA4DB-3534-4260-85D1-AA0B9721F21B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D72DA4DB-3534-4260-85D1-AA0B9721F21B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D72DA4DB-3534-4260-85D1-AA0B9721F21B}.Release|x86.ActiveCfg = Release|x86
+		{D72DA4DB-3534-4260-85D1-AA0B9721F21B}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

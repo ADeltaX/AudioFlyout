@@ -86,7 +86,10 @@ namespace AudioFlyout
                 e == VirtualKeyShort.VOLUME_MUTE ||
                 e == VirtualKeyShort.MEDIA_NEXT_TRACK || e == VirtualKeyShort.MEDIA_PREV_TRACK ||
                 e == VirtualKeyShort.MEDIA_PLAY_PAUSE || e == VirtualKeyShort.MEDIA_STOP)
+            {
+                VolumeSMTC.FindSMTCAndHide(); //Is this CPU expensive?
                 w.Show();
+            }
         }
     }
 }
