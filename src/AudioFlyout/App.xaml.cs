@@ -2,6 +2,7 @@
 using System;
 using System.Windows;
 using NAudio.CoreAudioApi;
+using System.Threading;
 
 namespace AudioFlyout
 {
@@ -10,6 +11,8 @@ namespace AudioFlyout
     /// </summary>
     public partial class App : Application
     {
+        static Mutex mutex = new Mutex(true, "{509f191a-0d84-4385-bc3d-fc817e75d2be}AudioFlyout");
+
         private static AudioDeviceNotificationClient client;
         private static MMDeviceEnumerator enumerator;
         private static MainWindow vlFly;
@@ -19,6 +22,15 @@ namespace AudioFlyout
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
+            if (!mutex.WaitOne(TimeSpan.Zero, true))
+            {
+                //You may want to hide Volume HUD (again?)
+                VolumeSMTC.ForceFindSMTCAndHide();
+
+                Environment.Exit(0);
+                return; //UwU
+            }
+
             VolumeSMTC.ForceFindSMTCAndHide();
 
             //Flyout
