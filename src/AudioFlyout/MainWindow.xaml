@@ -1,0 +1,78 @@
+﻿<Window xmlns:classes="clr-namespace:AudioFlyout.Classes"
+        x:Class="AudioFlyout.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AudioFlyout"
+        Background="#01FFFFFF"
+        SizeToContent="WidthAndHeight"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        mc:Ignorable="d"
+        Topmost="True"
+        ShowInTaskbar="False"
+        Title="MainWindow">
+    <Window.Resources>
+        <Style TargetType="Glyphs" x:Key="Glyph">
+            <Setter Property="FontRenderingEmSize" Value="12"/>
+            <Setter Property="Width" Value="12"/>
+            <Setter Property="Height" Value="12"/>
+            <Setter Property="Fill" Value="White" />
+        </Style>
+
+        <Style TargetType="Glyphs" x:Key="GlyphBig">
+            <Setter Property="FontRenderingEmSize" Value="20"/>
+            <Setter Property="Width" Value="20"/>
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Fill" Value="White" />
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <Border Width="364" Margin="0" Background="#BB444444" CornerRadius="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="32" />
+                    <RowDefinition Height="48" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="48" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="48" />
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" VerticalAlignment="Top" Margin="0,0,16,0" Stylus.IsPressAndHoldEnabled="False" 
+                    Width="32" Padding="0" Height="32" Background="Transparent" Visibility="Hidden">
+                    <Glyphs Style="{StaticResource Glyph}" FontUri="C:\Windows\Fonts\segmdl2.ttf" Margin="0,0,0,0" Fill="LightGray" UnicodeString="&#xE713;" />
+                </Button>
+
+                <Button x:Name="HideFlyoutButton" Grid.Column="2" VerticalAlignment="Top" Margin="16,0,0,0" Stylus.IsPressAndHoldEnabled="False" 
+                    Width="32" Padding="0" Height="32" Background="Transparent">
+                    <Glyphs Grid.Column="2" Style="{StaticResource Glyph}" Fill="LightGray" FontUri="C:\Windows\Fonts\segmdl2.ttf" UnicodeString="&#xE8BB;" />
+                </Button>
+
+                <!--<Rectangle Grid.Column="1" Fill="DarkGray" Width="36" Margin="0,-8,0,0" Height="2" />
+                <Rectangle Grid.Column="1" Fill="DarkGray" Width="36" Margin="0,0,0,0" Height="2" />-->
+
+                <Border x:Name="MovableAreaBorder" Grid.Column="1" Background="Transparent" />
+
+                <Button Style="{StaticResource FlatButton}" x:Name="VolumeButton" Grid.Row="1" VerticalAlignment="Top" Margin="0,0,0,0" Stylus.IsPressAndHoldEnabled="False" 
+                    Width="48" Padding="0" Height="48" Background="Transparent" Click="VolumeButton_Click">
+                    <Grid>
+                        <Glyphs Style="{StaticResource GlyphBig}" Fill="DarkGray" FontUri="C:\Windows\Fonts\segmdl2.ttf" UnicodeString="&#xE995;" x:Name="VolumeShadowGlyph" />
+                        <Glyphs Style="{StaticResource GlyphBig}" FontUri="C:\Windows\Fonts\segmdl2.ttf" UnicodeString="&#xE767;" x:Name="VolumeGlyph" />
+                    </Grid>
+                </Button>
+
+                <Slider Grid.Row="1" Margin="8,0" x:Name="VolumeSlider" Maximum="100" Minimum="0" Grid.Column="1"
+                        SmallChange="0.01"  ValueChanged="VolumeSlider_ValueChanged" IsMoveToPointEnabled="True" PreviewMouseWheel="VolumeSlider_PreviewMouseWheel">
+                    
+                </Slider>
+                <TextBlock Grid.Row="1" x:Name="textVal" Grid.Column="2" HorizontalAlignment="Center" Margin="6" FontWeight="Light"
+                        Text="100" VerticalAlignment="Center" Foreground="White" FontSize="20"/>
+            </Grid>
+        </Border>
+        <StackPanel Margin="0,0,0,0" x:Name="SessionsStackPanel" />
+    </StackPanel>
+</Window>
