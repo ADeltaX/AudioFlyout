@@ -1,5 +1,5 @@
 # AudioFlyout
-Replace the Volume/SMTC UI with a custom one. Only for **Windows 10 17763+**
+*Replace the Volume/SMTC UI with a custom one. Only for **Windows 10 17763+***
 
 This repo is an example of how you **shouldn't** code. Code readibility is "wontfix".
 
