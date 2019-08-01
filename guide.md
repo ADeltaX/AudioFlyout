@@ -4,7 +4,7 @@
 
 ### What are the differences?
 **AudioFlyout.zip** -> uses admin privilege to hook the volume up/down and media keys (next, previous, play/pause, stop) from any window.\
-**Pro**: This can be run from any folder without problems.\
+**Pro**: This can be run from any folder without any problem.\
 **Cons**: this will not be the top most window (task manager in always on top will cover the AudioFlyout window), can't be displayed on lock screen.
 
 **AudioFlyoutUA.zip** --> doesn't make use of admin privilege but it makes use of **UI Access**. This will give access to create a **top top most** window, displayable even in lock screen.\
@@ -12,8 +12,8 @@
 **Cons**: **this is test signed, as a code signing certificate is expensive for me to obtain**, which means you need to trust the certificate to run it.
 
 ### What I should use?
-If security and adding test certs to "Trusted people" isn't really an issue for you, I suggest to use AudioFlyoutUA.zip
-It's like adding test certificates to install appx.
+If security and adding test certs to "Trusted people" isn't really an issue for you, I suggest to use AudioFlyoutUA.zip\
+It's like adding test certificates to install an appx.
 
 # How to install for "AudioFlyoutUA.zip"
 Extract this on "Program Files (x86)" (or "Program Files" if you are running Windows 10 32-bit)\
