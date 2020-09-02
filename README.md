@@ -1,3 +1,9 @@
+# THIS APP WILL BE INTEGRATED INTO DYNAMIC SHELL.
+DShell will be open sourced soon.
+
+# FOR AN UPDATED STANDALONE PROJECT: https://github.com/ShankarBUS/ModernFlyouts
+# THIS PROJECT IS NOW READ ONLY.
+
 # AudioFlyout
 *Replace the Volume/SMTC UI with a custom one. Only for **Windows 10 17763+***
 
